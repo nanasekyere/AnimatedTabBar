@@ -79,10 +79,10 @@ struct DropletButtonAnimatable: View, Animatable {
 
     public var body: some View {
         ZStack {
-            Image(imageName)
+            Image(systemName: imageName)
                 .padding(.vertical, 10)
             Droplet(t: dropletParam)
-                .mask(t > 0.5 ? AnyView(Image(imageName)) : AnyView(Rectangle().frame(width: frame.width, height: frame.height)))
+                .mask(t > 0.5 ? AnyView(Image(systemName: imageName)) : AnyView(Rectangle().frame(width: frame.width, height: frame.height)))
                 .foregroundColor(dropletColor)
         }
         .scaleEffect(scale)
